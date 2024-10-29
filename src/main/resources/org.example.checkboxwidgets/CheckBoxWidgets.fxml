@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.checkboxwidgets.CheckBoxWidgetsController">
+    <VBox>
+        <Label fx:id="Label1" text="Надпись1"/>
+        <Label fx:id="Label2" text="Надпись2"/>
+        <Label fx:id="Label3" text="Надпись3"/>
+    </VBox>
+    <VBox>
+        <CheckBox fx:id="checkBox1"/>
+        <CheckBox fx:id="checkBox2"/>
+        <CheckBox fx:id="checkBox3"/>
+    </VBox>
+</HBox>
