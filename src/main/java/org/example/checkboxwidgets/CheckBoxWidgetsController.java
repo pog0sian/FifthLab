@@ -4,34 +4,41 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 public class CheckBoxWidgetsController {
 
     @FXML
-    private CheckBox checkBox1;
+    private CheckBox labelCheckBox;
 
     @FXML
-    private CheckBox checkBox2;
+    private CheckBox buttonCheckBox;
 
     @FXML
-    private CheckBox checkBox3;
+    private CheckBox textFieldCheckBox;
 
     @FXML
-    private Label label1;
+    private Label label;
 
     @FXML
-    private Label label2;
+    private Button button;
 
     @FXML
-    private Label label3;
+    private TextField textField;
 
     @FXML
-    private void isBlocked(CheckBox checkBox) {
+    private void toggleTextField() {
+        textField.setDisable(!textFieldCheckBox.isSelected());
+    }
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("CheckBoxWidgets.fxml"));
+    @FXML
+    private void toggleButton() {
+        button.setDisable(!buttonCheckBox.isSelected());
+    }
 
-        if (checkBox.isSelected()) {
-            label1.setVisible(false);
-        }
+    @FXML
+    private void toggleLabel() {
+        label.setDisable(!labelCheckBox.isSelected());
     }
 }
